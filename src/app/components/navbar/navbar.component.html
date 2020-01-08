@@ -15,10 +15,10 @@
         </ul>
         <span class="navbar-text">
         
-            <button *ngIf="!auth.loggedIn" class="btn btn-outline-primary">
+            <button (click)="auth.login()" *ngIf="!auth.loggedIn" class="btn btn-outline-primary">
                 Ingresar
             </button>
-            <button *ngIf="auth.loggedIn" class="btn btn-outline-danger">
+            <button (click)="auth.logout()" *ngIf="auth.loggedIn" class="btn btn-outline-danger">
                 Salir
             </button>
 
